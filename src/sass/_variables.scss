@@ -1,0 +1,30 @@
+@import "neat/neat-helpers";
+
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: $helvetica;
+$serif: $georgia;
+
+$base-font-family: 'Source Sans Pro' !default;
+$header-font-family: "Gotham";
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: golden-ratio(1em, 1) !default;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$hot-pink: #ff0084;
+$dark-gray: #4c4c4c;
+$blue: #3d9cdd;
+$dark-blue: #125582;
+
+// Body Color
+$base-body-color: white;
+
+//  Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $hot-pink;

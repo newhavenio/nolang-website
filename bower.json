@@ -1,0 +1,20 @@
+{
+  "name": "nolang-website",
+  "version": "0.0.0",
+  "homepage": "https://github.com/newhavenio/nolang-website",
+  "authors": [
+    "Adam Soffer <adam.soffer@digitalsurgeons.com>"
+  ],
+  "description": "NoLang, the conf! This is the website for it.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "~3.0.1"
+  }
+}
