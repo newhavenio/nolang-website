@@ -29,3 +29,11 @@ Examples:
     $value: join((), $values, if($sublists, comma, space));
     @each $prop in $props { #{$prop}: $value }
 }
+
+// ------------------------------------------------------------
+// Omega Reset Mixin
+// ------------------------------------------------------------
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

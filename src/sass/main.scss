@@ -2,12 +2,12 @@
 @import "grid-settings";
 @import "neat/neat";
 
-
 @import "utils";
 @import "bower_components/normalize-scss/normalize";
 @import "variables";
 @import "typography";
 @import "buttons";
+
 
 $visual-grid: true;
 $visual-grid-color: #e6f6ff;
@@ -192,32 +192,35 @@ $visual-grid-opacity: 0.4;
             text-align: center;
         }
         ul {
-            @include media($tablet) {
-                @include span-columns(9);
-            }
-            @include media($desktop) {
-                @include span-columns(12);
-            }
-            padding: 0;
+            @include row();
+            padding-left: 0;
             list-style: none;
             text-align: center;
+
             li {
-                @include media($tablet) {
-                    @include span-columns(3 of 9);
-                    //padding: 0 em(5);
+                margin-bottom: em(30);
+
+                @include media($tablet)  {
+                    @include span-columns(3);
+                    @include omega(3n);
+                    margin-bottom: em(30);
                 }
-                @include media($desktop) {
-                    @include span-columns(3 of 12);
-                    //padding: 0 em(5);
-                }
+
+                // @include media($tablet)  {
+                //     @include span-columns(3);
+                //     @include omega(4n);
+                //     margin-bottom: em(30);
+                // }
 
                 .speakers {
                     position: relative;
                     display:block;
+                    margin: 0 auto;
                     background-image: url(/images/img_adam_chambers.jpg);
                     background-size: cover;
                     width: 250px;
                     height: 250px;
+
                     .about {
                         //position: absolute;
                         background: #fff;

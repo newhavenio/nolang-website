@@ -1,6 +1,6 @@
 var path = require('path');
 
 module.exports = {
-	port: '8181',
+	port: '4000',
 	root: path.resolve('./build')
 };
