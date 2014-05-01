@@ -4,7 +4,7 @@
 NoLang, the conf! This is the website for it.
 
 ##Install Instructions
-**requires node.js*
+*requires node.js*
 
 check out this repository
 

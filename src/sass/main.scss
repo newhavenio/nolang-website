@@ -191,6 +191,19 @@ $visual-grid-opacity: 0.4;
             font-size: em(36);
             text-align: center;
         }
+        h3 {
+            font-size: em(23);
+            color: $blue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            color: $blue;
+            border-color: $blue;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
         ul {
             @include row();
             padding-left: 0;
@@ -205,13 +218,6 @@ $visual-grid-opacity: 0.4;
                     @include omega(3n);
                     margin-bottom: em(30);
                 }
-
-                // @include media($tablet)  {
-                //     @include span-columns(3);
-                //     @include omega(4n);
-                //     margin-bottom: em(30);
-                // }
-
                 .speakers {
                     position: relative;
                     display:block;
@@ -243,5 +249,83 @@ $visual-grid-opacity: 0.4;
                 }
             }
         }
+    }
+}
+
+.panel-6 {
+    @include row();
+    > div {
+
+        .location-container {
+            @include media($tablet) {
+                width: 50%;
+                float: left;
+            }
+
+            padding: em(130) 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            .location {
+
+                margin: 0 auto 40px auto;
+                width: 400px;
+                padding: 30px 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+                h2 {
+                    font-size: em(35);
+                    font-weight: normal;
+                }
+            }
+            &.venue {
+                background-image: url(/images/img_venue.jpg);
+                .location {
+                    background: #fff;
+                    h2 {
+                        color: $hot-pink;
+                    }
+                    margin-botton: 40px;
+                }
+            }
+            &.after-party {
+                background-image: url(/images/img_party.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                .location {
+                    background: #181818;
+                    h2 {
+                        color: $blue;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+.panel-7 {
+    background-image: url(/images/bg_attendees.jpg);
+    background-size: cover;
+    padding: em(230) 0;
+    h2 {
+        @include media($tablet) {
+            //width: 500px;
+        }
+        font-size: em(36);
+        margin: 0 auto;
+        display: block;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
     }
 }
