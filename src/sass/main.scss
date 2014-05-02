@@ -88,15 +88,17 @@
             padding-top: em(230)
         }
         h2 {
-            font-weight: normal;
-            color: #fff;
-            font-size: em(40);
-            margin-bottom: em(5);
-            text-align: center;
+            @include row();
+
             @include media($tablet) {
                 @include span-columns(5);
                 text-align: left;
             }
+            font-weight: normal;
+            color: #fff;
+            font-size: em(36);
+            margin-bottom: em(5);
+            text-align: center;
         }
         ul {
             list-style: none;
@@ -278,6 +280,9 @@
 
             .location {
 
+                @include media(new-breakpoint(max-width 320px)) {
+                    width: 300px;
+                }
                 @include media($tablet) {
                     width: 350px;
                 }
@@ -331,7 +336,10 @@
 .panel-7 {
     background-image: url(/images/bg_attendees.jpg);
     background-size: cover;
-    padding: em(230) 0;
+    padding: em(150) 0;
+    @include media($tablet) {
+        padding: em(230) 0;
+    }
     h2 {
         @include media($tablet) {
             //width: 500px;
