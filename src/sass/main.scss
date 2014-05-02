@@ -8,11 +8,6 @@
 @import "typography";
 @import "buttons";
 
-
-$visual-grid: true;
-$visual-grid-color: #e6f6ff;
-$visual-grid-opacity: 0.4;
-
 .panel-1 {
     background-image: url(/images/bg_header.jpg);
     background-size: cover;
@@ -181,7 +176,7 @@ $visual-grid-opacity: 0.4;
     }
 }
 .panel-5 {
-    padding: em(50) 0;
+    padding: em(75) 0;
     > div {
 
         @include outer-container;
@@ -190,6 +185,8 @@ $visual-grid-opacity: 0.4;
             color: $hot-pink;
             font-size: em(36);
             text-align: center;
+            font-weight: normal;
+            margin-bottom: 40px;
         }
         h3 {
             font-size: em(23);
@@ -213,11 +210,23 @@ $visual-grid-opacity: 0.4;
             li {
                 margin-bottom: em(30);
 
-                @include media($tablet)  {
+                @include media(new-breakpoint(min-width 510px 8)) {
+                    @include span-columns(4);
+                    @include omega(2n);
+                }
+
+                @include media(new-breakpoint(min-width 800px 9)) {
+                    @include omega-reset(2n, 12);
                     @include span-columns(3);
                     @include omega(3n);
-                    margin-bottom: em(30);
                 }
+
+                @include media(new-breakpoint(min-width 1088px 12)) {
+                    @include omega-reset(3n, 12);
+                    @include span-columns(3);
+                    @include omega(4n);
+                }
+
                 .speakers {
                     position: relative;
                     display:block;
@@ -269,6 +278,12 @@ $visual-grid-opacity: 0.4;
 
             .location {
 
+                @include media($tablet) {
+                    width: 350px;
+                }
+                @include media(new-breakpoint(min-width 800px)) {
+                    width: 400px;
+                }
                 margin: 0 auto 40px auto;
                 width: 400px;
                 padding: 30px 50px;
@@ -327,5 +342,55 @@ $visual-grid-opacity: 0.4;
         font-weight: normal;
         color: #fff;
         text-align: center;
+    }
+}
+.panel-8 {
+    background: #1b1e21;
+    padding: em(90) em(15);
+
+    > div {
+        @include outer-container;
+        h2 {
+            font-size: em(36);
+            color: $hot-pink;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        p {
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+        a {
+            color: $blue;
+            text-decoration: none;
+        }
+        ul {
+            @include row();
+            margin-bottom: 40px;
+            list-style: none;
+            padding: 0;
+            padding-top: 20px;
+            li {
+                @include media($tablet) {
+                    @include span-columns(3);
+                    @include omega(3n);
+                }
+                border: 1px solid #5d5e61;
+                margin-bottom: 20px;
+                a {
+                    text-indent: -9000px;
+                    display: block;
+                    padding: 60px 0;
+                    background: url('/images/icon_dummy_logo.png') no-repeat #282b2e center;
+                }
+            }
+        }
+
+        footer {
+            border-top: 1px solid #282b2e;
+            padding-top: 20px;
+        }
     }
 }

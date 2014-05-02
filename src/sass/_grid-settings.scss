@@ -1,5 +1,7 @@
 @import "neat/neat-helpers"; // or "neat-helpers" when in Rails
 
+
+
 // Change the grid settings
 $column: 90px;
 $gutter: 30px;
@@ -12,6 +14,11 @@ $min-width: em(480);
 // ------------------------------------------------------------
 $fg-column: $column;
 $fg-gutter: $gutter;
+
+$visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.5;
 
 // Define your breakpoints
 $tablet: new-breakpoint(min-width 617px 9);
