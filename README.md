@@ -11,9 +11,14 @@ check out this repository
     git clone https://github.com/newhavenio/nolang-website.git
     cd nolang-website
 
-Install Gulp, the streaming build system
+Install Gulp, the streaming build system, and gulp-embedlr
 
     npm install -g gulp
+    npm install -g gulp-embedlr
+
+If you don't have bower, install that
+
+    npm install -g bower
 
 Install dependencies in package.json and bower.json
 
