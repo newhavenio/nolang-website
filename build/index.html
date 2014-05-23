@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="noLang">
     <head>
         <title>NoLang Conf</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -9,197 +9,206 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
                 rel="stylesheet">
     </head>
-    <body>
-        <header>
-
-        </header>
-        <section class="panel-1">
-            <div>
-                <div>
-                    <i class="fa fa-bars btn-menu"></i>
-                    <img src="images/icon_logo.png">
-                    <a href="#" class="btn">Register</a>
-                </div>
-            </div>
-        </section>
-        <section class="panel-2">
-            <div>
-                <ul>
-                    <li>
-                        <img src="images/icon_meet.png">
-                        <h2>Meet</h2>
-                        <p>New Haven is home to lots of developers.We hack in
-                            different languages, but we hack like we mean it.
-                            For our projects, our teams, our community.</p>
-                    </li>
-                    <li>
-                        <img src="images/icon_think.png">
-                        <h2>Think</h2>
-                        <p>If an idea is useful, we'll use it, no matter which
-                            language it came from. You can't afford to be narrow
-                            in your influences, right?</p>
-                    </li>
-                    <li>
-                        <img src="images/icon_hack.png">
-                        <h2>Hack</h2>
-                        <p>Forget what we hack IN. Let's talk about what we hack
-                             ON. Let's talk about how we hack, and why, and how
-                             we can hack better.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="panel-3">
-            <div>
-                <article>
-                <h2>What you'll hear @ newhaven.io nolang</h2>
-                <ul>
-                    <li>Approaches like devops and agile</li>
-                    <li>New ideas, theories, and algorithms</li>
-                    <li>Tools like redis, neo4j</li>
-                    <li>Software design, testing, and architecture</li>
-                </ul>
-                </article>
-            </div>
-        </section>
-        <section class="panel-4">
-            <div>
-                <h2>Register</h2>
-                <p>
-                    NewHaven.io NoLang will be free to attend, but we only have room
-                    for about a hundred attendees, so don't put it off. <br>
-                    If you <a href="#">donate $20</a>, we'll throw in a conference T-shirt.
-                </p>
-                <div class="sign-up">
-                    <a href="#" class="btn">Register</a>
-                    <span>or</span>
-                    <a href="#" class="btn">Present</a>
-                </div>
-            </div>
-        </section>
-        <section class="panel-5">
-            <div>
-                <h2>Who's Speaking</h2>
-                <ul>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
+    <body ng-controller="MenuCtrl">
+        <div class="container" ng-class="{'menu-open': isOpen}">
+            <div class="content">
+                <nav class="menu">
+    				<ul>
+    					<li><a ng-click="scrollTo('register')">Register</a></li>
+    					<li><a ng-click="scrollTo('speakers')">Speakers</a></li>
+    					<li><a ng-click="scrollTo('venue')">Venue</a></li>
+                        <li><a ng-click="scrollTo('sponsors')">Sponsors</a></li>
+    				</ul>
+    			</nav>
+                <section id="panel" class="panel-1">
+                    <div>
+                        <div>
+                            <i class="fa fa-bars btn-menu" ng-click="toggleMenu()"></i>
+                            <img src="images/icon_logo.png">
+                            <a href="#" class="btn">Register</a>
                         </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="speakers">
-                            <div class="about">
-                                <span class="name">Adam Chambers</span>
-                                <span class="title">Front End Developer</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <h3>Interested in speaking?</h3>
-                <a href="#" class="btn">Present</a>
-            </div>
-        </section>
-        <section class="panel-6">
-            <div>
-                <div class="location-container venue">
-                    <div class="location">
-                        <h2>The Venue</h2>
-                        <p>STARTS AT 8PM</p>
-                        <p>The Yale TEAL Classroom<br>
-                            17 Hillhouse Ave.<br>
-                            New Haven, CT<br>
-                            06511
-                        </p>
                     </div>
-                </div>
-                <div class="location-container after-party">
-                    <div class="location">
-                        <h2>After Party</h2>
-                        <p>AFTER THE EVENT</p>
-                        <p>Bar<br>
-                            254 Crown Street<br>
-                            New Haven, CT<br>
-                            06511
-                        </p>
+                </section>
+                <section class="panel-2">
+                    <div>
+                        <ul>
+                            <li>
+                                <img src="images/icon_meet.png">
+                                <h2>Meet</h2>
+                                <p>New Haven is home to lots of developers.We hack in
+                                    different languages, but we hack like we mean it.
+                                    For our projects, our teams, our community.</p>
+                            </li>
+                            <li>
+                                <img src="images/icon_think.png">
+                                <h2>Think</h2>
+                                <p>If an idea is useful, we'll use it, no matter which
+                                    language it came from. You can't afford to be narrow
+                                    in your influences, right?</p>
+                            </li>
+                            <li>
+                                <img src="images/icon_hack.png">
+                                <h2>Hack</h2>
+                                <p>Forget what we hack IN. Let's talk about what we hack
+                                     ON. Let's talk about how we hack, and why, and how
+                                     we can hack better.</p>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                </section>
+                <section class="panel-3">
+                    <div>
+                        <article>
+                        <h2>What you'll hear @ newhaven.io nolang</h2>
+                        <ul>
+                            <li>Approaches like devops and agile</li>
+                            <li>New ideas, theories, and algorithms</li>
+                            <li>Tools like redis, neo4j</li>
+                            <li>Software design, testing, and architecture</li>
+                        </ul>
+                        </article>
+                    </div>
+                </section>
+                <section id="register" class="panel-4">
+                    <div>
+                        <h2>Register</h2>
+                        <p>
+                            NewHaven.io NoLang will be free to attend, but we only have room
+                            for about a hundred attendees, so don't put it off. <br>
+                            If you <a href="#">donate $20</a>, we'll throw in a conference T-shirt.
+                        </p>
+                        <div class="sign-up">
+                            <a href="#" class="btn">Register</a>
+                            <span>or</span>
+                            <a href="#" class="btn">Present</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="speakers" class="panel-5">
+                    <div>
+                        <h2>Who's Speaking</h2>
+                        <ul>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="speakers">
+                                    <div class="about">
+                                        <span class="name">Adam Chambers</span>
+                                        <span class="title">Front End Developer</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <h3>Interested in speaking?</h3>
+                        <a href="#" class="btn">Present</a>
+                    </div>
+                </section>
+                <section id="venue" class="panel-6">
+                    <div>
+                        <div class="location-container venue">
+                            <div class="location">
+                                <h2>The Venue</h2>
+                                <p>STARTS AT 8PM</p>
+                                <p>The Yale TEAL Classroom<br>
+                                    17 Hillhouse Ave.<br>
+                                    New Haven, CT<br>
+                                    06511
+                                </p>
+                            </div>
+                        </div>
+                        <div class="location-container after-party">
+                            <div class="location">
+                                <h2>After Party</h2>
+                                <p>AFTER THE EVENT</p>
+                                <p>Bar<br>
+                                    254 Crown Street<br>
+                                    New Haven, CT<br>
+                                    06511
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel-7">
+                    <h2><strong>Newhaven.io</strong> NoLang <strong><br>is happening. Come meet up.</strong></h2>
+                </section>
+                <section id="sponsors" class="panel-8">
+                    <div>
+                        <h2>Sponsors</h2>
+                        <p>If you'd like to sponsor NewHaven.io NoLang, <a href="#">get in
+                            touch.</a>
+                        </p>
+                        <ul>
+                            <li><a href="#">Sponsor Name</a></li>
+                            <li><a href="#">Sponsor Name</a></li>
+                            <li><a href="#">Sponsor Name</a></li>
+                            <li><a href="#">Sponsor Name</a></li>
+                            <li><a href="#">Sponsor Name</a></li>
+                            <li><a href="#">Sponsor Name</a></li>
+                        </ul>
+                        <footer>
+                            <p>NewHaven.io. Some copyright mumbo jumbo. Maybe an email to get in
+                                touch</p>
+                        </footer>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section class="panel-7">
-            <h2><strong>Newhaven.io</strong> NoLang <strong><br>is happening. Come meet up.</strong></h2>
-        </section>
-        <section class="panel-8">
-            <div>
-                <h2>Sponsors</h2>
-                <p>If you'd like to sponsor NewHaven.io NoLang, <a href="#">get in
-                    touch.</a>
-                </p>
-                <ul>
-                    <li><a href="#">Sponsor Name</a></li>
-                    <li><a href="#">Sponsor Name</a></li>
-                    <li><a href="#">Sponsor Name</a></li>
-                    <li><a href="#">Sponsor Name</a></li>
-                    <li><a href="#">Sponsor Name</a></li>
-                    <li><a href="#">Sponsor Name</a></li>
-                </ul>
-                <footer>
-                    <p>NewHaven.io. Some copyright mumbo jumbo. Maybe an email to get in
-                        touch</p>
-                </footer>
-            </div>
-        </section>
-
+        </div>
+        <script src="js/app.js"></script>
     
 <script type="text/javascript">document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script>
 </body>
