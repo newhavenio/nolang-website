@@ -325,8 +325,8 @@ body {
                     }
 
                     @include media(new-breakpoint(min-width 1088px 12)) {
-                        @include omega-reset(3n, 12);
-                        @include span-columns(3);
+                        @include omega-reset(4n, 12);
+                        @include span-columns(4);
                         @include omega(4n);
                     }
 
@@ -334,19 +334,23 @@ body {
                         position: relative;
                         display:block;
                         margin: 0 auto;
-                        background-image: url(/images/img_adam_chambers.jpg);
                         background-size: cover;
-                        width: 250px;
-                        height: 250px;
+                        width: 350px;
+                        height: 350px;
+                        text-decoration: none;
+                        color: $dark-gray;
+                        &.sandi {
+                            background-image: url(/images/speakers/img_sandimetz.jpg);
+                        }
 
                         .about {
                             //position: absolute;
                             background: #fff;
                             padding: em(10) 0;
-                            width: 230px;
+                            width: 330px;
                             z-index: 1;
                             position: relative;
-                            top: 170px;
+                            top: 270px;
                             left: 10px;
                             text-align: center;
 
@@ -370,7 +374,8 @@ body {
 
             .location-container {
                 @include media($tablet) {
-                    width: 50%;
+                    //width: 50%;
+                    width: 100%;
                     float: left;
                 }
 
@@ -492,7 +497,7 @@ body {
                         text-indent: -9000px;
                         display: block;
                         padding: 60px 0;
-                        background: url('/images/icon_dummy_logo.png') no-repeat #282b2e center;
+                        background: url('http://placehold.it/340x145/ff0084/ffffff&text=Become a Sponsor') no-repeat #282b2e center;
                     }
                 }
             }
