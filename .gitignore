@@ -9,3 +9,4 @@ _site/
 npm-debug.log
 node_modules/
 bower_components/
+.awspublish-www.nolang.io

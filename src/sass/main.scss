@@ -117,6 +117,13 @@ body {
                 @include media($tablet) {
                     padding: em(20) 0 em(90) 0;
                 }
+                h2 {
+                    color: #fff;
+                    text-align: center;
+                    text-transform: capitalize;
+                    font-weight: normal;
+                    margin-bottom: 40px;
+                }
                 i.btn-menu {
                     color: $hot-pink;
                     background: #fff;
